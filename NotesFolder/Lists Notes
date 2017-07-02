@@ -1,0 +1,28 @@
+Variable is a box in memory remebmer that
+
+plain variable = one box
+
+list variable = many boxes
+
+daily_high_temps = [83, 80, 73, 75, 79, 83, 86]
+7 boxes being created number 0 to 6
+
+When you referances a list with nothing in [] you are  refering to the set of variables memory location
+
+
+
+print(daily_high_temps[0])
+
+list1 = [3.1, 1.2, 5.9]
+list2 = [3.0, 2.5]
+list3 = list1 + list2
+or
+list1 += list2
+list1.append(Thing to apphend on)
+
+Adds one thing at a time. Apphend is helpful being sometime you dont know how many things you would like to had so you
+can do it one thing at a time so you will not have empty spaces or maybe not enough range.
+
+
+
+list1[-1] will give you the last thing in the list

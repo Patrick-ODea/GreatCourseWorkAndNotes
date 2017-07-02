@@ -1,0 +1,264 @@
+###################BOOKS####################
+
+###Top Down Design
+Zelle, Python Programming, chap. 9.
+
+###Functions/Abstractions
+Gries, Practical Programming, chap. 3.
+Matthes, Python Crash Course, chap. 8.
+Sweigart, Automate the Boring Stuff with Python, chap. 3.
+Zelle, Python Programming, chap. 6.
+
+###Lists
+Gries, Practical Programming, chap. 8.
+Matthes, Python Crash Course, chaps. 3–4.
+Sweigart, Automate the Boring Stuff with Python, chap. 4.
+
+###Basic Program Design
+Gries, Practical Programming, chap. 15.
+Zelle, Python Programming, chap. 2.
+
+###Loops
+Gries, Practical Programming, chap. 9.
+Matthes, Python Crash Course, chap. 7.
+Zelle, Python Programming, chap. 8.
+
+###Files and strings
+Gries, Practical Programming, chap. 10.
+Zelle, Python Programming, chap. 5.
+
+###Parameter passing, scope and mutable data
+Gries, Practical Programming, chap. 3.
+Matthes, Python Crash Course, chap. 8.
+Sweigart, Automate the Boring Stuff with Python, chap. 3.
+Zelle, Python Programming, chap. 6.
+
+
+###Error Types, Systematic Debugging, Exceptions
+Gries, Practical Programming, chap. 15.
+Sweigart, Automate the Boring Stuff with Python, chap. 10.
+
+###Python standard library, modules, packages
+Gries, Practical Programming, chap. 6.
+Sweigart, Automate the Boring Stuff with Python, chaps. 7–18.
+
+
+###Games
+Matthes, Python Crash Course, chaps. 12–14
+
+
+
+
+
+
+
+
+
+
+
+
+-When building a program start out by thinking about the program dont just jump into t he coding
+-Pyramid style layout.
+-iterative development = adding or making improvements to working code.
+-Clean codes is formed by many runs and tests
+
+if
+elif
+else
+
+
+#####Loops#####
+While loops can be views as if states that just keep repeating while the condition is true
+for loops a
+
+
+
+#####Files#####
+
+-Working with data files
+
+-Three steps
+    <open file
+    <Perform Operations on file
+    <Close the file
+
+    ----- OPTION 1
+    myfile = open("Filename", "w")
+    #Do something here
+    myfile.close()
+    ----- OPTION 2
+    with open("Filename", "w") as myfile:
+    #Do something here
+
+
+myfile = open("Filename", "w")
+myfile.write("This line is written to the file.")
+myfile.close()
+
+myfile = open("Filename", "r")
+linefromfile = myfile.readline()
+myfile.close()
+
+
+
+-Escape characters \' \" \n \t \\
+
+-a, b, c = line.split(',')
+
+#########Functions#########
+Functions. The blackbox where you only  have to worry about whats going on in the current box. You dont care where the
+input is coming from or going you are just focusing on what needs to be done in that box.
+
+Separate functionality from other code.
+
+Use a function when doing the same thing in multiple times in the same piece of code.
+
+Anything you have a concept that you can view as a single unit.
+
+
+###RETURN VALUES###
+
+In python you can return multiple values in a funciton call. This is not allowed in all programming languges
+In python  you are actully on really getting one value which is a tuple.
+
+def getName():
+ first = input("Enter your first name:")
+ last = input("Enter your last name:")
+ return first, last
+
+userfirst, userlast = getName()
+or
+userfirst = getName(0)
+userLast = getName(1)
+
+
+
+###Parameters###
+
+Pass by Value - python
+Pass by reference - c++
+
+Mutable and immutable data types
+
+Immutable = int float strings (functions can not change variable passed)
+mutable = lists, objects (functions can change variable)
+
+
+Mutable data types are reference (pointers) to data values
+
+
+#####SEE SCREEN CAPTURES IN NOTE FOLDERS#####
+
+Default Arguments
+
+When not specifying is goes left to right
+Also can do keyword argument
+
+function(animal = "dog", w, 123231)
+
+
+#####Error Types, Systematic Debugging, Exceptions #####
+""""thomas edison bug trap""""
+""""Grace Hopper Mk2""""
+
+-Everyone has bugs in their programs its normal.
+-Syntax errors are the most common and easiest to find. Misspelled words
+-SyntaxError : invalid Syntax
+
+-runtime errors
+ Wrong type of variable used in function input
+
+-logic errors
+    Everything works perfectly from the computers standpoint but the program is not doing what you want
+    Also can have error in the way you are thinking.
+
+-Debugging
+    Stages
+        -create thorough tests
+        -isolate the error
+        -correct the error
+        test the correction
+-Test suite
+    -Edge cases Using the extremes of data
+    -Middle cases
+    -special cases
+
+Common way to debug is using print statements in a lot of places in your code
+
+-Debuggers
+    -Ide -> pycharm has debugger
+        breakpoints
+        step over(goes to start of next line),
+        step into(moves into like going into a loops)
+        Watches(set variables to look at step by set.)
+
+
+###Exceptions###
+
+    Try except blocks.
+    try:
+        #Commands to tryout
+    except: ErrorType
+        #Code to fix error
+    except: ErrorType
+        #Code to fix error
+    except:
+        #Code to fix error
+    else:
+        NO EXCEPTIONS FOUND
+    finally:
+        exceptions or not this will run
+
+raise ErrorType
+    #you can throw these to checkdata
+    #use if checking if a month is 1 through 12
+
+Only use exceptions if you can not find the error at the point  of detection instead use if then statements
+
+
+#####Python standard library, modules, packages#####
+
+-modules are normal python programs but are organized focusing on abstraction
+
+Imports
+    such as
+        import math
+        import numpy
+        import webbrowser -open web browser
+        import turtle - graphics
+        import Tkinter - gui
+        import shutil -do things with operating system
+        import ssl -network connections
+        import matplotlib
+        import zero mq
+        import twisted
+        import requests
+        import beautifulsoap
+PyPI
+
+-Import statements
+
+    import math
+        Need to do math.add()
+    from math import add
+        add()
+
+
+-Modules can be used to define Variables, give you a set of functions and define classes
+
+-pyPi-ranking.info
+
+---What raises a program to the level of a module is that the program provides
+   a set of functions, classes , and constants that all work together to accomplish a common goal
+
+__init__.py lets the computer know directory is a package
+
+
+#####Games#####
+
+    -Initialize and set up
+    -loop while game not over
+    -Do a round of the game
+
+Procedural programming = the main task are done with separate functions and calling them.
+stubs = place holder functions for helping in building program.
